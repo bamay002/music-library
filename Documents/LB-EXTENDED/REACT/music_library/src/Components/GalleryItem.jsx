@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React,{ useState } from 'react'
 
 function GalleryItem(props){
     let [view, setView] = useState(false)
@@ -25,7 +25,7 @@ function GalleryItem(props){
     
     return (
         <div onClick={() => setView(!view)} style={{'display': 'inline-block'}}>
-          {view ? detailView : simpleView}
+          { view ? detailView() : simpleView() }
         </div>
     )
 }
