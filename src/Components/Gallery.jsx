@@ -7,9 +7,9 @@ import { DataContext } from "../Context/DataContext"
 function Gallery(){
     const data = useContext(DataContext)
 
-    const display = data.map((song, i) => {
+    const display = data.map((item, i) => {
         return (
-            <GalleryItem item={song} key={i} />
+            <GalleryItem item={item} key={i} />
         )
     })
 

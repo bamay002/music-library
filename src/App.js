@@ -5,6 +5,7 @@ import SearchBar from './Components/SearchBar'
 import { DataContext } from './Context/DataContext';
 import { SearchContext } from './Context/SearchContext';
 
+document.title = 'Music Library'
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
     e.preventDefault()
     // fetch data
     const fetchData = async () => {
-      document.title = `${term} music`
+      document.title = `${term} Music`
       const response = await fetch(API_URL + term)
       const resData = await response.json()
       if (resData.results.length > 0) {
