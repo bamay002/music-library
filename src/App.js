@@ -31,8 +31,9 @@ function App() {
           return setMessage('Not Found.')
       }
     }
-  fetchData()
+  fetchData().catch(err => console.log(err))
   }
+
  
 
   return (
